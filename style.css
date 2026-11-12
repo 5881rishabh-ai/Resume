@@ -1,0 +1,253 @@
+/* ==========================================
+   Resume website - Rishabh Kumar
+   Colours: Navy (#0b2a5b) and White
+   ========================================== */
+
+/* ---------- Universal selector: reset margin/padding ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Element selectors ---------- */
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #eef2fa;
+  color: #1c1c1c;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 38px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 22px;
+  color: #0b2a5b;
+  border-bottom: 2px solid #0b2a5b;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-size: 17px;
+  color: #0b2a5b;
+  margin: 16px 0 6px 0;
+}
+
+p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+ul, ol {
+  margin-left: 22px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: #0b2a5b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #1d5bd6;
+}
+
+section {
+  margin-bottom: 26px;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: #0b2a5b;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 40px;
+}
+
+.monogram {
+  width: 110px;
+  height: 110px;
+}
+
+.tagline {
+  font-size: 17px;
+  color: #cfdcf5;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/* ---------- Navigation bar ---------- */
+nav {
+  background-color: white;
+  border-bottom: 3px solid #0b2a5b;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 2px;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+nav a:hover {
+  background-color: #0b2a5b;
+  color: white;
+  text-decoration: none;
+}
+
+/* ---------- Page layout (two columns using flexbox) ---------- */
+.container {
+  display: flex;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.sidebar {
+  width: 32%;
+  background-color: white;
+  border: 1px solid #b8c7e6;
+  border-top: 5px solid #0b2a5b;
+  padding: 20px;
+  height: fit-content;
+}
+
+.main-content {
+  width: 68%;
+  background-color: white;
+  border: 1px solid #b8c7e6;
+  border-top: 5px solid #0b2a5b;
+  padding: 20px 26px;
+}
+
+/* ---------- Tables ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #b8c7e6;
+  padding: 8px;
+  text-align: left;
+}
+
+.edu-table th {
+  background-color: #0b2a5b;
+  color: white;
+}
+
+/* alternate row colour using nth-child pseudo-class */
+.edu-table tbody tr:nth-child(even) {
+  background-color: #eef2fa;
+}
+
+.edu-table tbody tr:hover {
+  background-color: #d5e0f7;
+}
+
+.contact-table th {
+  background-color: #eef2fa;
+  width: 32%;
+}
+
+/* ---------- ID selectors ---------- */
+#top {
+  border-bottom: 4px solid #cfdcf5;
+}
+
+#about p {
+  font-size: 17px;
+}
+
+#skills li,
+#hobbies li {
+  list-style-type: square;
+}
+
+#achievements li:first-child {
+  font-weight: bold;
+}
+
+/* ---------- Other classes ---------- */
+.back-top {
+  text-align: right;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #0b2a5b;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+footer p {
+  margin: 0;
+  text-align: center;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (tablet and mobile)
+   ========================================== */
+@media (max-width: 800px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 22px 16px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .tagline {
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .main-content {
+    width: 100%;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  /* smaller text and padding so the education table fits the screen */
+  .edu-table th,
+  .edu-table td {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .main-content {
+    padding: 16px 14px;
+  }
+}
